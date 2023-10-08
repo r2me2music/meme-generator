@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  font-family: "Lilita One", sans-serif;
+  background-color: #2E004B;
+  color: white;
+  padding: 20px;
+}
+
+.header--image {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.header--title {
+  font-size: 20px;
+  margin-right: auto;
+}
+
+.header--project {
+  font-size: 12px;
+  font-weight: 500;
+}
