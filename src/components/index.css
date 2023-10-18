@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-/* body {
-  display: flex;
-} */
-
 main {
   padding: 0px;
   margin: 0px;
@@ -106,9 +102,30 @@ main {
   font-family: 'Gaegu', cursive;
 }
 
+.font-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Gaegu', cursive;
+  height: 65px;
+  border-radius: 40px;
+  background-color: #FFE3BD;
+  color: #2E004B;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.font-section h2 {
+  margin: 0px 10px 0px 0px;
+}
+
+.font-section button {
+  margin-bottom: 3px;
+}
+
 .meme {
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: center;
   padding-right: 8px;
 }
@@ -129,7 +146,7 @@ main {
   margin: 15px 0;
   padding: 0 5px;
   font-family: 'Lilita One', impact, sans-serif;
-  font-size: 2em;
+  /* font-size: 24px; */
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
