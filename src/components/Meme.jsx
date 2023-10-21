@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useCallback, useRef } from "react"
+import { toPng } from 'html-to-image'
 import "./index.css"
 
 export default function Meme() {
@@ -47,12 +48,12 @@ export default function Meme() {
 
   
   function fontLilita () {
-    setFontName("Lilita One")
+    setFontName("Lilita One, Impact")
     console.log("font is Lilita One")
   }
   
   function fontGaegu () {
-    setFontName("Gaegu")
+    setFontName("Gaegu, Comic Sans, sans-serif")
     console.log("font is Gaegu")
   }
 
@@ -74,6 +75,26 @@ export default function Meme() {
     setFontSizing(prevFontSizing => prevFontSizing + 2)
     console.log(fontSizing)
   }
+
+  // HTML-to-image code, Download meme
+
+  const ref = useRef(null)
+
+  const htmlToImageConvert = useCallback(() => {
+    if (ref.current === null) {
+      return
+    }
+    
+    toPng(ref.current, { cacheBust: false, })
+      .then((dataUrl) => {
+        const link = document.createElement("a")
+        link.download = "meme-by-r2.png"
+        link.href = dataUrl
+        link.click()
+      })
+  }, [ref])
+
+  // Return section
 
   return (
     <main>
@@ -151,10 +172,25 @@ export default function Meme() {
           +
         </button>
       </div>
-      <div className="meme">
-        <img src={meme.randomImage} className="meme--image" />
-        <p style={{fontSize: (fontSizing), fontFamily: (fontName)}} className="meme--text top">{meme.topText}</p>
-        <p style={{fontSize: (fontSizing), fontFamily: (fontName)}} className="meme--text bottom">{meme.bottomText}</p>
+      <div id="meme-section">
+        <div className="empty-div"></div>
+        <div id="meme-button-container">
+          <div className="meme" ref={ref} style={{fontSize: (fontSizing), fontFamily: (fontName)}}>
+            <img src={meme.randomImage} className="meme--image"  />
+            <p className="meme--text top">{meme.topText}</p>
+            <p className="meme--text bottom">{meme.bottomText}</p>
+          </div>
+          <div id="download-container">
+            <button 
+              id="download--button"
+              className="form--button"
+              onClick={htmlToImageConvert}
+            >
+              Download Meme
+            </button>
+          </div>
+        </div>
+        <div className="empty-div"></div>
       </div>
     </main>
   )

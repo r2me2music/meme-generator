@@ -67,7 +67,7 @@ main {
   box-shadow: 0 4px #2E004B;
   padding: 10px 16px;
   background-color: #FFAC4A;
-  color: white;
+  color: #2E004B;
   cursor: pointer;
   margin-bottom: 14px;
   margin-right: 10px;
@@ -123,11 +123,19 @@ main {
   margin-bottom: 3px;
 }
 
+#meme-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .meme {
   display: flex;
   position: relative;
   justify-content: center;
-  padding-right: 8px;
+  border-radius: 10px;
+  padding-right: 0px;
+  background-color: transparent;
 }
 
 .meme--image {
@@ -145,8 +153,6 @@ main {
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
-  font-family: 'Lilita One', impact, sans-serif;
-  /* font-size: 24px; */
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
@@ -160,6 +166,15 @@ main {
       0 -2px 0 #000,
       -2px 0 0 #000,
       2px 2px 5px #000;
+}
+
+#download-container {
+  display: flex;
+  justify-content: right;
+}
+
+#download--button {
+  margin: 10px 0px;
 }
 
 .bottom {
