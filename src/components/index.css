@@ -1,23 +1,33 @@
 * {
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
   padding: 0px;
-  margin: 0px;
+  max-width: 600px;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   height: 65px;
+  max-width: 600px;
   border-radius: 40px;
   font-family: "Lilita One", sans-serif;
   background-color: #2E004B;
   color: white;
   padding: 20px;
   margin-bottom: 10px;
+}
+
+#header-left {
+  display: flex;
+  height: 100%;
+  margin: 0px;
+  align-items: center;
 }
 
 .header--image {
@@ -27,12 +37,17 @@ main {
 
 .header--title {
   font-size: 1.25rem;
-  margin-right: auto;
+}
+
+#header-right {
+  display: flex;
+  margin: 0px;
 }
 
 .header--project {
   font-size: .75rem;
   font-weight: 500;
+  margin: 0px;
 }
 
 .form {
@@ -45,6 +60,7 @@ main {
   font-family: 'Lilita One', sans-serif;
   border-radius: 20px;
   border: 2px solid #2E004B;
+  width: 100%;
   outline: none;
   padding: 10px;
   text-indent: 5px;
@@ -58,6 +74,7 @@ main {
 .button-container {
   display: flex;
   flex-direction: row;
+  margin: 0px;
 }
 
 .form--button {
@@ -71,6 +88,7 @@ main {
   cursor: pointer;
   margin-bottom: 14px;
   margin-right: 10px;
+  text-wrap: nowrap;
 }
 
 .form--button:hover {
@@ -88,6 +106,7 @@ main {
   border-radius: 20px;
   border: 2px solid #2E004B;
   outline: none;
+  width: 100%;
   padding: 10px 16px;
   margin-bottom: 13px;
   flex-grow: 1;
@@ -102,7 +121,13 @@ main {
   font-family: 'Gaegu', cursive;
 }
 
-.font-section {
+#font-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#font-container, #size-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -112,15 +137,28 @@ main {
   background-color: #FFE3BD;
   color: #2E004B;
   padding: 20px;
+  margin: 0px;
   margin-bottom: 10px;
 }
 
-.font-section h2 {
+#font-container h2 {
   margin: 0px 10px 0px 0px;
 }
 
-.font-section button {
+#size-container h2 {
+  margin: 0px 10px 0px 0px;
+}
+
+#font-container button {
   margin-bottom: 3px;
+}
+
+#size-container button {
+  margin-bottom: 3px;
+}
+
+#font-container {
+  margin-right: auto;
 }
 
 #meme-section {
@@ -133,13 +171,13 @@ main {
   display: flex;
   position: relative;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 0px;
   padding-right: 0px;
   background-color: transparent;
 }
 
 .meme--image {
-  border-radius: 10px;
+  border-radius: 0px;
   outline: 2px solid #2E004B;
   max-width: 100%;
   height: auto;
@@ -170,7 +208,7 @@ main {
 
 #download-container {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 #download--button {

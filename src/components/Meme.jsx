@@ -44,7 +44,7 @@ export default function Meme() {
 
   // Font section, set meme font name
 
-  const [fontName, setFontName] = React.useState("Lilita One")
+  const [fontName, setFontName] = React.useState("Lilita One, Impact")
 
   
   function fontLilita () {
@@ -138,39 +138,43 @@ export default function Meme() {
           />
         </div>
       </div>
-      <div className="font-section">
-        <h2>Font</h2>
-        <button 
-          className="form--button"
-          onClick={fontLilita}
-        >
-          Lilita
-        </button>
-        <button 
-          className="form--button"
-          onClick={fontGaegu}
-        >
-          Gaegu
-        </button>
-        <h2>Size {fontSizing}</h2>
-        <button 
-          className="form--button"
-          onClick={fontDown}
-        >
-          -
-        </button>
-        <button 
-          className="form--button"
-          onClick={fontReset}
-        >
-          Reset
-        </button>
-        <button 
-          className="form--button"
-          onClick={fontUp}
-        >
-          +
-        </button>
+      <div id="font-section">
+        <div id="font-container">
+          <h2>Font</h2>
+          <button 
+            className="form--button"
+            onClick={fontLilita}
+          >
+            Lilita
+          </button>
+          <button 
+            className="form--button"
+            onClick={fontGaegu}
+          >
+            Gaegu
+          </button>
+        </div>
+        <div id="size-container">
+          <h2>Size {fontSizing}</h2>
+          <button 
+            className="form--button"
+            onClick={fontDown}
+          >
+            -
+          </button>
+          <button 
+            className="form--button"
+            onClick={fontReset}
+          >
+            Reset
+          </button>
+          <button 
+            className="form--button"
+            onClick={fontUp}
+          >
+            +
+          </button>
+        </div>
       </div>
       <div id="meme-section">
         <div className="empty-div"></div>
