@@ -177,7 +177,7 @@ export default function Meme() {
         </div>
       </div>
       <div id="meme-section">
-        <div className="empty-div"></div>
+        {/* <div className="empty-div"></div> */}
         <div id="meme-button-container">
           <div className="meme" ref={ref} style={{fontSize: (fontSizing), fontFamily: (fontName)}}>
             <img src={meme.randomImage} className="meme--image"  />
@@ -194,7 +194,7 @@ export default function Meme() {
             </button>
           </div>
         </div>
-        <div className="empty-div"></div>
+        {/* <div className="empty-div"></div> */}
       </div>
     </main>
   )

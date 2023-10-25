@@ -166,15 +166,13 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0px;
 }
 
 .meme {
   display: flex;
   position: relative;
   justify-content: center;
-  border-radius: 0px;
-  padding-right: 0px;
-  background-color: transparent;
 }
 
 .meme--image {
